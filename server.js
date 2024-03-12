@@ -89,7 +89,7 @@ app.get('/jokes/:category', (req, res) => {
 });
 
 
-// GET /jokes/:id
+// GET /joke/:id
 app.get('/joke/:id', (req, res) => {
     const { id } = req.params;
     db.get("SELECT * FROM jokes WHERE id = ?", [id], (err, row) => {
